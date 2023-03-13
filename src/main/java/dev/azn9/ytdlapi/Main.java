@@ -77,7 +77,7 @@ public class Main extends AbstractVerticle {
         boolean finalIsSearch = isSearch;
         String finalQuery = query;
 
-        ProcessBuilder processBuilder = new ProcessBuilder("/data/youtube-dl", "--skip-download", "--get-id", finalIsSearch ? "ytsearch:" + finalQuery : "https://youtu.be/" + finalQuery);
+        ProcessBuilder processBuilder = new ProcessBuilder("/data/youtube-dl", "--skip-download", "--get-id", finalIsSearch ? "ytsearch:\"" + finalQuery + "\"" : "https://youtu.be/" + finalQuery);
         String code = "";
 
         try {
